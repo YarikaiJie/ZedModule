@@ -3,6 +3,7 @@ import org.gradle.kotlin.dsl.api
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -112,4 +113,18 @@ dependencies {
     //图片加载(https://github.com/bumptech/glide)
     api("com.github.bumptech.glide:glide:5.0.5")
 //    ksp("com.github.bumptech.glide:ksp:4.16.0")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.YarikaiJie"
+            artifactId = "ZedModule"
+            version = "1.0.0"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }

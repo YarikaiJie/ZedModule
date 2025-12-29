@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        mavenCentral()
         maven { setUrl("https://jitpack.io") }
         maven { setUrl("https://maven.aliyun.com/repository/central") } // 替代maven2
         maven { setUrl("https://maven.aliyun.com/repository/public") } // central仓和jcenter仓的聚合仓
@@ -14,13 +15,13 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
-        mavenCentral()
         gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        mavenCentral()
         maven { setUrl("https://jitpack.io") }
         maven { setUrl("https://maven.aliyun.com/repository/central") } // 替代maven2
         maven { setUrl("https://maven.aliyun.com/repository/public") } // central仓和jcenter仓的聚合仓
@@ -29,7 +30,6 @@ dependencyResolutionManagement {
         maven { setUrl("https://maven.aliyun.com/repository/google") } // 替代google
         maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") } // gradle plugin
         google()
-        mavenCentral()
     }
 }
 
