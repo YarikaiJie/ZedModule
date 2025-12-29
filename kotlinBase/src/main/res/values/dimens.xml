@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 单个很长的button的圆角-->
+    <dimen name="single_btn_corner_size">8dp</dimen>
+    <!-- 一行2个button的圆角-->
+    <dimen name="two_btn_corner_size">6dp</dimen>
+
+    <dimen name="two_btn_single_padding">20dp</dimen>
+
+    <dimen name="switch_btn_padding">2dp</dimen>
+
+    <!-- 一些常用字体大小 -->
+    <dimen name="font_size_center_title">20dp</dimen>
+    <dimen name="font_size_center_title_desc">16dp</dimen>
+
+    <dimen name="seekbar_thumb_size">18dp</dimen>
+    <dimen name="seekbar_thumb_size_half">9dp</dimen>
+    <dimen name="seekbar_bg_height">6dp</dimen>
+    <dimen name="seekbar_bg_corner">4dp</dimen>
+</resources>

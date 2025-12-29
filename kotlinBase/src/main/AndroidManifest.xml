@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.module.kotlin"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <!-- Use hardcoded package name or remove if not strictly necessary for library -->
+    </queries>
+
+    <application>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.kotlin.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+
+            <!-- This entry makes ExampleLoggerInitializer discoverable. -->
+            <meta-data
+                android:name="com.module.kotlin.BaseLibraryInit"
+                android:value="androidx.startup" />
+        </provider>
+        <activity android:name=".crash.UncaughtExceptionActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

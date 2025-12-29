@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Base</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="logger_day">d</string>
+    <string name="logger_hour">h</string>
+    <string name="logger_minute">m</string>
+    <string name="logger_second">s</string>
+    <string name="label_tips_username_or_pwd_null">用户名或密码不能为空</string>
+    <string name="login_name_hint">用户名</string>
+    <string name="login_pwd_hint">密码</string>
+</resources>

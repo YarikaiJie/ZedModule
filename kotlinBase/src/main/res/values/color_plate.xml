@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 品牌主题色  -->
+    <color name="colorPrimary">@color/color_theme</color>
+
+    <!-- switch控件的颜色 -->
+    <color name="color_switch_block_bg">@color/color_hint_2</color>
+    <color name="color_switch_block_sel_dis_bg">@color/color_hint</color>
+
+    <color name="color_notify_bg">#fff2e0</color>
+</resources>

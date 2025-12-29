@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseTextView">
+        <attr name="canMarqueeText" format="boolean" />
+        <attr name="backgroundNormal" format="color" />
+        <attr name="backgroundPressed" format="color" />
+        <attr name="backgroundUnEnable" format="color" />
+        <attr name="backgroundStateColor" format="string" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" format="boolean" />
+        <attr name="backgroundShape" format="enum">
+            <!-- RECTANGLE, OVAL, LINE, RING-->
+            <enum name="RECTANGLE" value="0" />
+            <enum name="OVAL" value="1" />
+            <enum name="LINE" value="2" />
+            <enum name="RING" value="3" />
+        </attr>
+        <attr name="backgroundAlpha" format="integer|float" />
+        <!-- 解决后面留白太多问题 -->
+        <attr name="fixAfterWrapEndIsToolLong" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="BaseEditText">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseConstraintLayout">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseCoordinatorLayout">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseFrameLayout">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseLinearLayout">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseNestedScrollView">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseRecyclerView">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+        <attr name="hasFixedSize" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseToolBar">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseImageView">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseView">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseViewGroup">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+    <declare-styleable name="BaseShapeableImageView">
+        <!--是否为圆形图片-->
+        <attr name="isCircle" format="boolean" />
+        <!--模式1：四个圆角大小-->
+        <attr name="allCornerSize" format="dimension" />
+        <!--模式2：顶部圆角大小-->
+        <attr name="topCornerSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="BaseRadioGroup">
+        <attr name="backgroundNormal" />
+        <attr name="backgroundPressed" />
+        <attr name="backgroundUnEnable" />
+        <attr name="backgroundStateColor" />
+        <attr name="cornerRadius" />
+        <attr name="cornerSizeTopLeft" />
+        <attr name="cornerSizeTopRight" />
+        <attr name="cornerSizeBottomLeft" />
+        <attr name="cornerSizeBottomRight" />
+        <attr name="strokeColor" />
+        <attr name="strokeWidth" />
+        <attr name="rippleColor" />
+        <attr name="unboundedRipple" />
+        <attr name="backgroundShape" />
+        <attr name="backgroundAlpha" />
+    </declare-styleable>
+
+    <declare-styleable name="TextImageView">
+        <attr name="drawableTextPadding" format="dimension"/>
+
+        <!--  -->
+        <attr name="drawableMarginStart" format="dimension"/>
+        <attr name="drawableMarginEnd" format="dimension"/>
+
+        <attr name="drawableStartWidth" format="dimension"/>
+        <attr name="drawableStartHeight" format="dimension"/>
+        <attr name="drawableTopWidth" format="dimension"/>
+        <attr name="drawableTopHeight" format="dimension"/>
+        <attr name="drawableEndWidth" format="dimension"/>
+        <attr name="drawableEndHeight" format="dimension"/>
+        <attr name="drawableBottomWidth" format="dimension"/>
+        <attr name="drawableBottomHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

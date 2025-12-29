@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external_storage_root"
+        path="." />
+
+    <cache-path
+        name="videoShare"
+        path="videoShare" />
+
+    <!--代表app 外部存储区域根目录下的文件 Context.getExternalCacheDir目录下的目录-->
+    <external-cache-path
+        name="videoShare"
+        path="videoShare" />
+</paths>

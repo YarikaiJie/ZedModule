@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Base</string>
+    <string name="sure">Sure</string>
+    <string name="cancel">Cancel</string>
+    <string name="logger_day">d</string>
+    <string name="logger_hour">h</string>
+    <string name="logger_minute">m</string>
+    <string name="logger_second">s</string>
+    <string name="label_tips_username_or_pwd_null">Username or password is empty!</string>
+    <string name="login_name_hint">Username</string>
+    <string name="login_pwd_hint">Password</string>
+</resources>
