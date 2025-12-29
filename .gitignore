@@ -10,3 +10,5 @@
 local.properties
 /.idea/
 /.trae/
+/.kotlin/
+/.vscode/
