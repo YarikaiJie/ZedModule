@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.module.kotlin.mvvm.IMvvmBinding
 import com.module.kotlin.mvvm.MvvmBindingImpl
-import com.ustcinfo.f.ch.kotlin.base.dialog.MvvmDialog
-import com.ustcinfo.f.ch.kotlin.base.dialog.MvvmDialogV2Mode
 
 /**
  * @author zed

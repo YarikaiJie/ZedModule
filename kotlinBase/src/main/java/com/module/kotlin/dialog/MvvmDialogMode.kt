@@ -1,4 +1,4 @@
-package com.ustcinfo.f.ch.kotlin.base.dialog
+package com.module.kotlin.dialog
 
 import android.view.Gravity
 import androidx.fragment.app.DialogFragment

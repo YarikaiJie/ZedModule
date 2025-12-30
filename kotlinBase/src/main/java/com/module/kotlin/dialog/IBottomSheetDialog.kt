@@ -1,4 +1,4 @@
-package com.ustcinfo.f.ch.kotlin.base.dialog
+package com.module.kotlin.dialog
 
 import android.app.Dialog
 import android.os.Bundle
