@@ -13,6 +13,8 @@ import com.module.kotlin.utils.MvvmActivityLifecycleCallbacksUtil
 import com.tencent.mmkv.MMKV
 
 object BaseGlobalConst {
+    // 是否是debug包
+    public var isDebug: Boolean =false
     /**
      * application对象
      */

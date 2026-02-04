@@ -257,4 +257,18 @@
         <attr name="drawableBottomWidth" format="dimension"/>
         <attr name="drawableBottomHeight" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="SwitchButtonsLayout">
+        <attr name="first_str" format="string" />
+        <attr name="second_str" format="string" />
+        <attr name="padding_inner" format="dimension" />
+        <attr name="text_color" format="color"/>
+        <attr name="text_color_disable" format="color"/>
+        <attr name="select_text_color_left" format="color"/>
+        <attr name="select_text_color_right" format="color"/>
+        <attr name="select_text_color_disable" format="color"/>
+        <attr name="textPaddingHorz" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="isBold" format="boolean"/>
+    </declare-styleable>
 </resources>

@@ -30,17 +30,23 @@ object ByteUtil {
         return result
     }
 
-    fun byteArrayToIntNew(byteArray: ByteArray): Int {
-        require(byteArray.size <= 4) { "ByteArray 长度不能超过 4 字节" }
-        var u16Temp = 0
-        for (i in byteArray.indices) {
-            u16Temp = u16Temp shl 8 or (byteArray[i].toInt() and 0xFF)
+    fun byteArrayToInt(byteArray: ByteArray, range: IntRange): Int {
+        val startIndex = range.first
+        val endIndex = range.last
+        
+        // 验证范围下标不能超过数组长度
+        require(startIndex >= 0) { "起始下标不能小于 0" }
+        require(endIndex < byteArray.size) { "结束下标不能超过数组长度" }
+        
+        val rangeSize = endIndex - startIndex + 1
+        // 验证范围差值不能大于 4
+        require(rangeSize <= 4) { "范围长度不能超过 4 字节" }
+        
+        var result = 0
+        for (i in startIndex..endIndex) {
+            result = result shl 8 or (byteArray[i].toInt() and 0xFF)
         }
-        if ((u16Temp and 0x8000) != 0) {
-            u16Temp = u16Temp and 0x7FFF
-            u16Temp = -u16Temp
-        }
-        return u16Temp
+        return result
     }
 
     /**
@@ -143,6 +149,23 @@ object ByteUtil {
         )
     }
 
+    /**
+     * 整数转四字节数组
+     * @param value 整数值
+     * @return 四字节数组
+     */
+    fun intToCountBytes(value: Int, count: Int = 4): ByteArray {
+        require(count in 1..10) { "count must be between 1 and 10" }
+        val result = ByteArray(count)
+        // count 为 1-4 时，高位在前，从高字节开始取
+        val shiftCount = (count - 1) * 8
+        for (i in 0 until count) {
+            result[i] = (value shr (shiftCount - i * 8)).toByte()
+        }
+        return result
+    }
+
+    // 字符串转字节数组，用于固定长度字节数组转换，如密码
     fun stringToByteArrayWithLength(str: String, length: Int): ByteArray {
         val originalBytes = str.toByteArray(Charsets.UTF_8)
         return originalBytes.copyOf(length)

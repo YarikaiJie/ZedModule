@@ -41,7 +41,7 @@
         android:textColor="@color/color_des"
         android:gravity="center"
         android:textSize="18sp"
-        tools:text="@string/app_name" />
+        tools:text="@string/base" />
 
     <Space
         android:layout_width="match_parent"

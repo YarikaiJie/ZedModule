@@ -1,10 +1,12 @@
 package com.module.kotlin.filelog
 
 import android.os.Looper
+import com.module.kotlin.BaseGlobalConst.isDebug
 import com.module.kotlin.BaseLibraryConfig
 import com.module.kotlin.BuildConfig
 
 private const val TAG:String = "jc_np"
+
 
 
 /**
@@ -39,14 +41,14 @@ fun logW(s:String, tag:String="") {
 
 
 inline fun <RESULT> doOnlyDebug(block: () -> RESULT): RESULT? {
-    if (BuildConfig.DEBUG || BaseLibraryConfig.ALWAYS_DEBUG ) {
+    if (isDebug || BaseLibraryConfig.ALWAYS_DEBUG ) {
         return block.invoke()
     }
     return null
 }
 
 fun logD(s:String, tag:String="", realTag:String? = null) {
-    if (BuildConfig.DEBUG || LogFileManager.alwaysDebug) {
+    if (isDebug || LogFileManager.alwaysDebug) {
         LogUtils.dFull(realTag?: TAG, "$tag: $s")
     }
     if (LogFileManager.isNeedLogFile){
@@ -55,7 +57,7 @@ fun logD(s:String, tag:String="", realTag:String? = null) {
 }
 
 fun logI(s:String, tag:String="", realTag:String? = null) {
-    if (BuildConfig.DEBUG || LogFileManager.alwaysDebug) {
+    if (isDebug || LogFileManager.alwaysDebug) {
         LogUtils.iFull(realTag?: TAG, "$tag: $s")
     }
     if (LogFileManager.isNeedLogFile){
@@ -65,13 +67,13 @@ fun logI(s:String, tag:String="", realTag:String? = null) {
 
 
 fun logT(s:String, tag:String="", realTag: String? = null) {
-    if (BuildConfig.DEBUG || LogFileManager.alwaysDebug) {
+    if (isDebug || LogFileManager.alwaysDebug) {
         LogUtils.iFull(realTag?: TAG, "$tag: thread${Thread.currentThread().id}: $s")
     }
 }
 
 fun logM(s:String, tag:String="") {
-    if (BuildConfig.DEBUG || LogFileManager.alwaysDebug) {
+    if (isDebug || LogFileManager.alwaysDebug) {
         val isMainThread = (Thread.currentThread().id == Looper.getMainLooper().thread.id)
         LogUtils.dFull(TAG, "$tag: isMain($isMainThread): $s")
     }

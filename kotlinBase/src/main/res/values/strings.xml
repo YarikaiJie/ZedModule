@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Base</string>
+    <string name="base">Base</string>
     <string name="sure">Sure</string>
     <string name="cancel">Cancel</string>
     <string name="logger_day">d</string>

@@ -42,6 +42,7 @@ open class CheckListDialog : BaseDialog<DialogCheckListBinding>() {
             limitHeight: Int? =null,
             cancelAble: Boolean = true,
             sureText: String? = null,
+            iconRes: Int = R.mipmap.ic_selected_primary,
             cancelClick: ((CheckListDialog) -> Unit)? = null,
             onSelectedConfirm: ((value: String?) -> Unit)?
         ): CheckListDialog {
@@ -61,7 +62,7 @@ open class CheckListDialog : BaseDialog<DialogCheckListBinding>() {
                     d.mBinding.tvTitle.text = title
                     // 列表
                     d.mBinding.rcvList.layoutManager = LinearLayoutManager(d.requireContext())
-                    val adapter = SelectListAdapter(selectAction = { _, _ -> }).apply {
+                    val adapter = SelectListAdapter(selectAction = { _, _ -> },iconRes).apply {
                         submitList(items, true)
                         setSelectedValue(selectedValue)
                     }
@@ -88,7 +89,7 @@ open class CheckListDialog : BaseDialog<DialogCheckListBinding>() {
      * 列表适配器（单一 ViewHolder，无类型判断）
      * 左侧展示字符串，右侧选中显示主题色勾图标
      */
-    class SelectListAdapter(val selectAction: (String?, Int) -> Unit): BindRcvAdapter<String, SelectListAdapter.SelectHolder>() {
+    class SelectListAdapter(val selectAction: (String?, Int) -> Unit,val iconRes: Int = R.mipmap.ic_selected_primary): BindRcvAdapter<String, SelectListAdapter.SelectHolder>() {
         // 以“值”为准记录选中项，避免仅依赖下标导致的错选
         private var selectedIndex: Int = -1
         private var selectedValue: String? = null
@@ -112,10 +113,14 @@ open class CheckListDialog : BaseDialog<DialogCheckListBinding>() {
             parent: ViewGroup,
             viewType: Int
         ): SelectHolder {
-            return SelectHolder(selectAction, create(parent))
+            return SelectHolder(selectAction, iconRes, create(parent))
         }
 
-        class SelectHolder(selectAction: (String?, Int) -> Unit,binding: ItemChooseListBinding) :
+        class SelectHolder(
+            selectAction: (String?, Int) -> Unit,
+            val iconRes: Int,
+            binding: ItemChooseListBinding
+        ) :
             BindViewHolder<String, ItemChooseListBinding>(binding) {
             init {
                 // 点击事件只绑定一次，避免bindData重复绑定导致多次触发
@@ -138,7 +143,7 @@ open class CheckListDialog : BaseDialog<DialogCheckListBinding>() {
                 val isSelected = (bean == (bindingAdapter as SelectListAdapter).getSelectedValue())
                 if (isSelected) {
                     binding.ivChooseState.visibility = View.VISIBLE
-                    binding.ivChooseState.setImageResource(R.mipmap.ic_selected_primary)
+                    binding.ivChooseState.setImageResource(iconRes)
                 } else {
                     binding.ivChooseState.visibility = View.GONE
                 }

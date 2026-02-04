@@ -3,6 +3,7 @@ package com.module.kotlin.utils
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import com.module.kotlin.BaseGlobalConst
 import com.module.kotlin.BaseLibraryConfig
 import com.module.kotlin.BuildConfig
 
@@ -17,7 +18,7 @@ class MvvmActivityLifecycleCallbacksUtil : Application.ActivityLifecycleCallback
     }
 
     private fun print(reason:String) {
-        if (!BuildConfig.DEBUG) return
+        if (!BaseGlobalConst.isDebug) return
         logD ("activityList======>$reason")
         for (activity in _activityList) {
             val frag = activity.asOrNull<Activity>()?.javaClass?.name

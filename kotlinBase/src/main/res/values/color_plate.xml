@@ -6,6 +6,11 @@
     <!-- switch控件的颜色 -->
     <color name="color_switch_block_bg">@color/color_hint_2</color>
     <color name="color_switch_block_sel_dis_bg">@color/color_hint</color>
+    <color name="color_switch_block_text">#212121</color>
+    <color name="color_switch_block_text_dis">#cccccc</color>
+    <color name="color_switch_block_text_left_sel">#212121</color>
+    <color name="color_switch_block_text_right_sel">#212121</color>
+    <color name="color_switch_block_text_sel_dis">#999999</color>
 
     <color name="color_notify_bg">#fff2e0</color>
 </resources>

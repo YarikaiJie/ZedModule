@@ -21,7 +21,7 @@
         android:layout_margin="10dp"
         app:layout_constraintRight_toLeftOf="@id/iv_choose_state"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/app_name" />
+        tools:text="@string/base" />
 
     <ImageView
         android:id="@+id/iv_choose_state"
